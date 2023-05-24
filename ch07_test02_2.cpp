@@ -10,7 +10,7 @@ public:
 		this->title = title; this->price = price; this->pages = pages;
 	}
 	void show() {
-		cout << title << ' ' << price << "¿ø " << pages << " ÆäÀÌÁö" << endl;
+		cout << title << ' ' << price << "ì› " << pages << " íŽ˜ì´ì§€" << endl;
 	}
 	string getTitle() { return title; }
 	friend bool operator==(Book a, int price);
@@ -33,8 +33,8 @@ bool operator==(Book a, Book& b) {
 	else return false;
 }
 int main() {
-	Book a("¸íÇ° C++", 30000, 500), b("°íÇ° C++", 30000, 500);
-	if (a == 30000)cout << "Á¤°¡ 30000¿ø" << endl; // price ºñ±³
-	if (a == "¸íÇ° C++")cout << "¸íÇ° C++ ÀÔ´Ï´Ù." << endl; // Ã¥ title ºñ±³
-	if (a == b)cout << "µÎ Ã¥ÀÌ °°Àº Ã¥ÀÔ´Ï´Ù." << endl; // title, price, pages ºñ±³
+	Book a("ëª…í’ˆ C++", 30000, 500), b("ê³ í’ˆ C++", 30000, 500);
+	if (a == 30000)cout << "ì •ê°€ 30000ì›" << endl; // price ë¹„êµ
+	if (a == "ëª…í’ˆ C++")cout << "ëª…í’ˆ C++ ìž…ë‹ˆë‹¤." << endl; // ì±… title ë¹„êµ
+	if (a == b)cout << "ë‘ ì±…ì´ ê°™ì€ ì±…ìž…ë‹ˆë‹¤." << endl; // title, price, pages ë¹„êµ
 }
