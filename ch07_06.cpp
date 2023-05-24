@@ -9,7 +9,7 @@ public:
 		this->kick = kick; this->punch = punch;
 	}
 	void show();
-	Power& operator+=(Power op2); // += ¿¬»êÀÚ ÇÔ¼ö ¼±¾ğ
+	Power& operator+=(Power op2); // += ì—°ì‚°ì í•¨ìˆ˜ ì„ ì–¸
 };
 
 void Power::show() {
@@ -17,8 +17,8 @@ void Power::show() {
 }
 
 Power& Power::operator+=(Power op2) {
-	kick = kick + op2.kick; // kick ´õÇÏ±â
-	punch = punch + op2.punch; // punch ´õÇÏ±â
+	kick = kick + op2.kick; // kick ë”í•˜ê¸°
+	punch = punch + op2.punch; // punch ë”í•˜ê¸°
 	return *this;
 }
 
@@ -26,7 +26,7 @@ int main() {
 	Power a(3, 5), b(4, 6), c; 
 	a.show();
 	b.show();
-	c = a += b; // ÆÄ¿ö °´Ã¼ ´õÇÏ±â
+	c = a += b; // íŒŒì›Œ ê°ì²´ ë”í•˜ê¸°
 	a.show();
-	b.show();
+	c.show();
 }
